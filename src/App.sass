@@ -1,0 +1,39 @@
+=flex($direction)
+  display: flex
+  flex-direction: $direction
+
+.wh-100
+  width: 100%
+  height: 100%
+
+#root
+  @extend .wh-100
+
+.App
+  +flex(column)
+  @extend .wh-100
+
+.main-container
+  @extend .wh-100
+  +flex(row)
+
+.cities
+  @extend .wh-100
+  +flex(column)
+  flex-basis: 20%
+  background-color: beige
+
+.main
+  @extend .wh-100
+  +flex(column)
+  flex-basis: 80%
+  background-color: blue
+
+.header
+  +flex(column)
+
+.app-bar-container
+  +flex(row)
+  justify-content: space-between
+  align-items: center
+

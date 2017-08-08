@@ -1,33 +1,90 @@
-.wh-100, #root, .App, .main-container, .cities, .main {
+.wh-100, #root, .App, .main-container, .cities, .content {
   width: 100%;
   height: 100%; }
 
 .App {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; }
+  .header .app-bar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
 
 .main-container {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch; }
 
 .cities {
   display: flex;
   flex-direction: column;
-  flex-basis: 20%;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-basis: 25%;
   background-color: beige; }
 
-.main {
+.content {
   display: flex;
   flex-direction: column;
-  flex-basis: 80%;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-basis: 75%;
   background-color: blue; }
 
-.header {
-  display: flex;
-  flex-direction: column; }
-
-.app-bar-container {
+.default-info {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+  color: white; }
+
+.clear-icon {
+  position: relative;
+  display: none !important; }
+
+.cities-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-family: Georgia;
+  font-size: 200%; }
+
+.cities-list-container {
+  overflow-y: auto; }
+
+.cities-list-element {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center; }
+
+.cities-list-element:hover {
+  justify-content: space-between;
+  border: solid 1px blue; }
+  .cities-list-element:hover .clear-icon {
+    display: block !important; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; }
+
+.period-menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px; }

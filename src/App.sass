@@ -1,6 +1,8 @@
-=flex($direction)
+=flex($direction, $justify-content, $align-items)
   display: flex
   flex-direction: $direction
+  justify-content: $justify-content
+  align-items: $align-items
 
 .wh-100
   width: 100%
@@ -10,30 +12,59 @@
   @extend .wh-100
 
 .App
-  +flex(column)
+  +flex(column, flex-start, stretch)
   @extend .wh-100
+
+.header
+  +flex(column, flex-start, stretch)
+  .app-bar-container
+    +flex(row, space-between, center)
 
 .main-container
   @extend .wh-100
-  +flex(row)
+  +flex(row, flex-start, stretch)
 
 .cities
   @extend .wh-100
-  +flex(column)
-  flex-basis: 20%
+  +flex(column, flex-start, stretch)
+  flex-basis: 25%
   background-color: beige
 
-.main
+.content
   @extend .wh-100
-  +flex(column)
-  flex-basis: 80%
+  +flex(column, flex-start, stretch)
+  flex-basis: 75%
   background-color: blue
 
-.header
-  +flex(column)
+.default-info
+  +flex(row, flex-start, center)
+  color: white
 
-.app-bar-container
-  +flex(row)
+.clear-icon
+  position: relative
+  display: none !important
+
+.cities-header
+  +flex(column, center, center)
+  height: 100px
+  font-family: Georgia
+  font-size: 200%
+
+.cities-list-container
+  overflow-y: auto
+
+.cities-list-element
+  +flex(row, flex-end, center)
+
+.cities-list-element:hover
   justify-content: space-between
-  align-items: center
+  border: solid 1px blue
+  .clear-icon
+    display: block !important
 
+.content
+  +flex(column, flex-start, stretch)
+
+.period-menu-container
+  +flex(row, space-around, center)
+  height: 100px
